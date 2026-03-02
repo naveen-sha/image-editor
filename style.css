@@ -23,6 +23,9 @@ main{
 main section{
     width: 100%;
     padding: var(--padding-2xl);
+    display: flex;
+    gap: var(--gutter-2xl);
+
 }
 
 .btn{
