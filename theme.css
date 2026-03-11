@@ -1,6 +1,6 @@
 :root{
     /* bg colors */
-    --bg-primary-color: rgb(17,17,17);
+    --bg-primary-color: linear-gradient(90deg, rgb(34,34,34), rgb(50,50,50));
     --bg-secondry-color:rgb(34,34,34);
     --bg-active-color:rgb(233,233,233);
     --bg-danger-color:rgb(148, 22, 22);
