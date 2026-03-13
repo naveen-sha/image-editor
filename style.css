@@ -61,6 +61,10 @@ main section .left{
 
 main section .right{
     width: 30%;
+    background-color: var(--bg-secondry-color);
+    padding: var(--padding-lg);
+    border-radius: var(--border-radius-lg);
+
 }
 
 main section .top{
@@ -88,10 +92,20 @@ main section .bottom .placeholder{
 }
 
 main section .bottom .placeholder i{
-    font-size: 8rem;
+    font-size: 10rem;
 }
 
 main section .bottom .placeholder p{
     font-size: var(--font-size-lg);
-    margin-top: var(--margin-md);
+   
+}
+
+main section .right .filter{
+    width: 100%;
+
+}
+main section .right .filter input{
+    width:100%;
+    outline: none;
+    margin-top: var(--margin-sm);
 }
