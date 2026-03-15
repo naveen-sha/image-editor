@@ -76,8 +76,6 @@ function createfilterelement(name,unit="%",value,min,max){
     p.innerText=name
     div.appendChild(p);
     div.appendChild(input);
-
-    
     
 }
 Object.keys(filters).forEach(filter =>{

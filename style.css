@@ -137,5 +137,4 @@ main section .right .filter input::-webkit-slider-thumb{
     border-radius: 50%;
     background-color:red;
     margin-top: -8.5px;
-   
 }
