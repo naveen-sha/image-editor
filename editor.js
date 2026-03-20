@@ -71,7 +71,6 @@ function createfilterelement(name,unit="%",value,min,max){
     input.max=max;
     input.value=value;
     input.id=name;
-
     const p=document.createElement("p");
     p.innerText=name
     div.appendChild(p);
