@@ -80,6 +80,7 @@ function createfilterelement(name,unit="%",value,min,max){
 }
 Object.keys(filters).forEach(key =>{
   const filterelement=createfilterelement(key,filters[key].unit,filters[key].value,filters[key].min,filters[key].max);
-
+    document.querySelector(".filters").appendChild(filterelement);
+    
 
 })
