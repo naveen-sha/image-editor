@@ -81,6 +81,14 @@ function createfilterelement(name,unit="%",value,min,max){
 Object.keys(filters).forEach(key =>{
   const filterelement=createfilterelement(key,filters[key].unit,filters[key].value,filters[key].min,filters[key].max);
     document.querySelector(".filters").appendChild(filterelement);
+    if(key==="hueRotation"){
+        document.getElementById(key).addEventListener("input",()=>{
+            document.querySelector(".image").style.filter=generatefilterstring();
+        })
     
 
+}else{
+    document.getElementById(key).addEventListener("input",()=>{
+        document.querySelector(".image").style.filter=generatefilterstring();
+    })}
 })
