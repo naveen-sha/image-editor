@@ -92,3 +92,12 @@ Object.keys(filters).forEach(key =>{
         document.querySelector(".image").style.filter=generatefilterstring();
     })}
 })
+function generatefilterstring(){    let filterstring="";
+    Object.keys(filters).forEach(key =>{
+        const value=document.getElementById(key).value;
+        filterstring+=`${key}(${value}${filters[key].unit}) `;
+    })
+    return filterstring;
+}
+
+
