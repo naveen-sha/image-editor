@@ -13,3 +13,7 @@ const filters ={
 
 
 }
+
+function createFilterElement(name){
+    
+}
