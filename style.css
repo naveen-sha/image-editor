@@ -111,6 +111,12 @@ main section .bottom .placeholder p{
 
 }
 
+main section .right .filters{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-md);
+}
+
 main section .right .filter{
     width: 100%;
 
