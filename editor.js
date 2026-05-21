@@ -14,6 +14,12 @@ const filters ={
 
 }
 
-function createFilterElement(name){
-    
+function createFilterElement(name, value) {
+    const filterElement = document.createElement('div');
+    filterElement.className = 'filter-element';
+    filterElement.innerHTML = `
+        <label>${name}</label>
+        <input type="range" min="0" max="200" value="${value}" />
+    `;
+    return filterElement;
 }
