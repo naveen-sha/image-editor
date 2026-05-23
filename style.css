@@ -63,11 +63,11 @@ main section .left{
 main section .right{
     width: 30%;
     background-color: var(--bg-secondary-color);
-    padding:var(--padding-md) ;
+    padding:var(--padding-sm) ;
     border-radius:var(--border-radius-2xl) ;
     display: flex;
     flex-direction: column;
-    gap: var(--gutter-md);
+    gap: var(--gutter-sm);
 }
 
 main section .top{
@@ -114,7 +114,7 @@ main section .bottom .placeholder p{
 main section .right .filters{
     display: flex;
     flex-direction: column;
-    gap: var(--gutter-md);
+    gap: var(--gutter-sm);
 }
 
 main section .right .filter{
@@ -131,7 +131,7 @@ main section .right .filter input{
 
 main section .right .filter input::-webkit-slider-runnable-track{
     background-color: var(--bg-active-color);
-    height: 5px;
+    height: 3px;
     border-radius: 2px;
     
 }
@@ -139,9 +139,9 @@ main section .right .filter input::-webkit-slider-runnable-track{
 main section .right .filter input::-webkit-slider-thumb{
     cursor: pointer;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 15px;
     border-radius: 50%;
     background-color: red;
-    margin-top: -8px;
+    margin-top: -6px;
 }
