@@ -1,25 +1,94 @@
 const filters ={
-    brightness: 100,
-    contrast: 100,
-    saturation: 100,
-    exposure: 100,
-    hueRotation: 0,
-    blur: 0,
-    graysclale: 0,
-    invert: 0,
-    sepia: 0,
-    opacity: 100,
-    invert: 0,
+    brightness: {
+        value: 100, 
+        min: 0,
+        max: 200,
+        unit: "%"
 
+    },
+    contrast: {
+        value: 100,
+        min: 0,
+        max: 200,
+        unit: "%"
+    },
+    saturation: {
+        value: 100,
+        min: 0,
+        max: 200,
+        unit: "%"
+    },
+    exposure: {
+        value: 100,
+        min: 0,
+        max: 200,
+        unit: "%"
+    },
+    hueRotation: {
+        value: 0,
+        min: 0,
+        max: 360,
+        unit: "deg"
+    },
+    blur: {
+        value: 0,
+        min: 0,
+        max: 20,
+        unit: "px"
+
+    },
+    graysclale: {
+        value: 0,
+        min: 0,
+        max: 100,
+        unit: "%"
+    },
+    invert: {
+        value: 0,
+        min: 0,
+        max: 100,
+        unit: "%"
+    },
+    sepia: {
+        value: 0,
+        min: 0,
+        max: 100,
+        unit: "%"
+    },
+    opacity: {
+        value: 100,
+        min: 0,
+        max: 100,
+        unit: "%"
+    }
+
+}
+const filtersContainer = document.querySelector(".filters");
+
+function createFilterElement(name,unit ="%",value,min,max){
+    const div = document.createElement("div");
+    div.classList.add("filter");
+
+    const input = document.createElement("input");
+    input.type = "range";
+    input.min = min;
+    input.max = max;
+    input.value = value;
+    input.id = name;
+
+    const p = document.createElement("p");
+    p.innerText = name;
+
+    div.appendChild(p);
+    div.appendChild(input);
+
+    return div;
 
 }
 
-function createFilterElement(name, value) {
-    const filterElement = document.createElement('div');
-    filterElement.className = 'filter-element';
-    filterElement.innerHTML = `
-        <label>${name}</label>
-        <input type="range" min="0" max="200" value="${value}" />
-    `;
-    return filterElement;
-}
+Object.keys(filters).forEach(key => {
+   const filterElement = createFilterElement(key,filters[key].unit,filters[key].value,filters[key].min,filters[key].max);
+    filtersContainer.appendChild(filterElement);
+
+
+});
