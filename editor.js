@@ -67,6 +67,8 @@ const filters ={
 const imageCanvas = document.querySelector("#image-canvas");
 const imageInput = document.querySelector("#image-input");
 const canvasCtx = imageCanvas.getContext("2d");
+let file = null;
+let image = null;
 
 const filtersContainer = document.querySelector(".filters");
 
@@ -87,6 +89,10 @@ function createFilterElement(name,unit ="%",value,min,max){
     div.appendChild(p);
     div.appendChild(input);
 
+    input.addEventListener("input", (event) => {
+        filters[name].value = input.value;
+    });
+
     return div;
 
 }
@@ -99,7 +105,7 @@ Object.keys(filters).forEach(key => {
 });
 
 imageInput.addEventListener("change", (event) => {
-    const file = event.target.files[0];
+    file = event.target.files[0];
     const imagePlaceHolder = document.querySelector(".placeholder");
     imagePlaceHolder.style.display = "none";
 
@@ -107,9 +113,9 @@ imageInput.addEventListener("change", (event) => {
     const img = new Image();
     img.src = URL.createObjectURL(file);
 
-
-
     img.onload = () => {
+
+        image = img;
         imageCanvas.width = img.width;
         imageCanvas.height = img.height;
         canvasCtx.drawImage(img, 0, 0);
@@ -117,3 +123,9 @@ imageInput.addEventListener("change", (event) => {
 
 
 })
+
+function applyFilters() {
+   canvasCtx.filter =`brightness(${filters.brightness.value}${filters.brightness.unit})`
+   canvasCtx.drawImage(image, 0, 0);
+
+}
