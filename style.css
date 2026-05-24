@@ -156,4 +156,5 @@ canvas{
     display: flex;
     flex-wrap: wrap;
     gap: var(--gutter-sm);
+    background: var(--bg-secondary-color);
 }

@@ -374,4 +374,14 @@ Object.keys(presets).forEach(presetName => {
     presetButton.classList.add("btn");
     presetButton.innerText = presetName;
     presetsContainer.appendChild(presetButton);
-})
+
+    presetButton.addEventListener("click", () => {
+        const preset = presets[presetName];
+        Object.keys(preset).forEach(filterName => {
+            filters[filterName].value = preset[filterName];
+        });
+        applyFilters();
+        filtersContainer.innerHTML = "";
+        createFilters();
+    });
+});
