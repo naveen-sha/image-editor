@@ -369,9 +369,9 @@ const presets = {
     }
 };
 
-object.keys(presets).forEach(presetName => {
+Object.keys(presets).forEach(presetName => {
     const presetButton = document.createElement("button");
-    presetButton.classList.add("preset-btn btn");
-    presetButton.textContent = presetName;
+    presetButton.classList.add("btn");
+    presetButton.innerText = presetName;
     presetsContainer.appendChild(presetButton);
 })
