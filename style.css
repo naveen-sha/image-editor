@@ -139,7 +139,7 @@ main section .right .filter input::-webkit-slider-runnable-track{
 main section .right .filter input::-webkit-slider-thumb{
     cursor: pointer;
     appearance: none;
-    width: 12px;
+    width: 15px;
     height: 15px;
     border-radius: 50%;
     background-color: red;
@@ -149,4 +149,5 @@ main section .right .filter input::-webkit-slider-thumb{
 canvas{
    max-width: 90%;
    max-height: 80vh;
+   display: none;
 } 
