@@ -147,7 +147,6 @@ main section .right .filter input::-webkit-slider-thumb{
 }
 
 canvas{
-    background-color: green;
    max-width: 90%;
    max-height: 80vh;
 } 
