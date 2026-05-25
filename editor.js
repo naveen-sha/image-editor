@@ -149,7 +149,7 @@ function applyFilters() {
 }
 resetbtn.addEventListener("click", () => {
 
-    let filters ={
+    filters ={
     brightness: {
         value: 100, 
         min: 0,
@@ -207,13 +207,13 @@ resetbtn.addEventListener("click", () => {
         unit: "%"
     }
 
-};
+}
     applyFilters();
     filtersContainer.innerHTML = "";
     createFilters();
 
 
-})
+});
 
 downloadbtn.addEventListener("click", () => {
     const link = document.createElement("a");
