@@ -22,9 +22,8 @@ A browser-based image editor built using HTML, CSS, and JavaScript.
 * JavaScript
 
 ## How to Run
-
-1. Clone the repository
-2. Open `index.html` in your browser
+here is the link
+https://image-editor-three-woad.vercel.app
 
 ## Project Status
 
