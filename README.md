@@ -31,7 +31,6 @@ Currently under development.
 
 ## Future Improvements
 
-* Download edited images
 * Crop and rotate tools
 * Dark/light theme
 * Undo/redo functionality
